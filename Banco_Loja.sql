@@ -20,4 +20,4 @@ CREATE TABLE produtos (
     quantidade INT NOT NULL
 );
 
-INSERT INTO `adm`(`id`, `nome`, `senha`) VALUES ( 1, "admin", 123 );
+INSERT INTO `adm`(`id`, `nome`, `senha`) VALUES ( 1, "admin", 1234 );
