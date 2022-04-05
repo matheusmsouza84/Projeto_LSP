@@ -1,0 +1,93 @@
+body{
+    height: auto;
+    width: auto;
+}
+.header{
+    background-color: rgb(0, 2, 92);
+    height: 5rem;
+    text-align: center;
+    font-family: 'Unicorn';
+    font-size: 55px;
+    color: white;
+}
+.content{
+    background-color: rgb(244, 244, 244);;
+    height: 700px;
+    text-align: center;
+}
+.footer{
+    background-color: rgb(0, 2, 92);
+    height: 5rem;
+}
+.navbar{
+    background-color: rgb(0, 2, 92);
+    border: solid rgb(0, 2, 92);
+    border-left: 2px;
+    border-right: 2px;
+    height: auto;
+}
+@media screen{
+    #loginadm, #cart, #logout, #paginicial, #voltar, #addcart, #exccart{
+        background-color: transparent;
+        border: transparent;
+    }
+}
+#divsombra{
+    font-family: 'Times new roman';
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+#divcadastro{
+    font-family: 'Times new roman';
+    text-align: center;
+    height:50%;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#divadm{
+    font-family: 'Times new roman';
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 220px;
+}
+#divmed{
+    display: inline-block;
+    font-family: 'Times new roman';
+    margin-top: 150px;
+    margin-left: 0px;
+    margin-bottom: 80px;
+    width: 300px;
+    height: 100px;
+}
+#divloja{
+    text-align: center;
+    height: auto;
+    font-family: 'Times new roman';
+}
+table{
+    border: solid transparent 10px;
+    font-family: 'Times new roman';
+    height: 200px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    text-align: center;
+}
+td{
+    border: solid transparent 8px;
+}
+#table{
+    border: solid rgb(0, 2, 92) 3px;
+    border-radius: 20px;
+    height: auto;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
