@@ -3,7 +3,7 @@ body{
     width: auto;
 }
 .header{
-    background-color: rgb(0, 2, 92);
+    background-color: rgb(57, 57, 73);
     height: 5rem;
     text-align: center;
     font-family: 'Unicorn';
@@ -11,17 +11,19 @@ body{
     color: white;
 }
 .content{
-    background-color: rgb(244, 244, 244);;
+    background-image: 
+    url("imagens/img.png");
+    background-position: center;
     height: 700px;
     text-align: center;
 }
 .footer{
-    background-color: rgb(0, 2, 92);
+    background-color: rgb(57, 57, 73);
     height: 5rem;
 }
 .navbar{
-    background-color: rgb(0, 2, 92);
-    border: solid rgb(0, 2, 92);
+    background-color: rgb(57, 57, 73);
+    border: solid rgb(57, 57, 73);
     border-left: 2px;
     border-right: 2px;
     height: auto;
@@ -34,13 +36,15 @@ body{
 }
 #divsombra{
     font-family: 'Times new roman';
+    color: aliceblue;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 300px;
 }
 #divcadastro{
     font-family: 'Times new roman';
+    color: aliceblue;
     text-align: center;
     height:50%;
     width: 25%;

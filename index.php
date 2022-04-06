@@ -38,7 +38,7 @@
                 </div>
             </nav>
             <div class="content"><br><br><br><br><br><br><br><br><br>
-                <div class="shadow-lg bg-white" id="divsombra">
+                <div class="shadow-lg bg-cray" id="divsombra">
                     <h4><b>Login</b></h4><br>
                     <form method="POST" id="formlogin" action="" >
                         <input type="email" placeholder="E-mail" name="email" required> <br><br>

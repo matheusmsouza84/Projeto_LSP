@@ -33,7 +33,7 @@
             </div>
         </nav>
         <div class="content"><br><br><br><br><br><br><br>
-                <div class="shadow-lg bg-white" id="divcadastro">
+                <div class="" id="divcadastro">
                     <h1>Cadastrar Usuário</h1><br>
                     <form method="POST" action="controller/salvarusuario.php">
                         <label>Nome: </label>
