@@ -16,6 +16,7 @@ CREATE TABLE adm (
 CREATE TABLE produtos (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) NOT NULL,
+    genero VARCHAR(50) NOT NULL,
     preco DOUBLE NOT NULL,
     quantidade INT NOT NULL
 );

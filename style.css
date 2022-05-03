@@ -59,9 +59,10 @@ body{
     width: 400px;
     height: 220px;
 }
-#divmed{
+#divprod{
     display: inline-block;
     font-family: 'Times new roman';
+    color: aliceblue;
     margin-top: 150px;
     margin-left: 0px;
     margin-bottom: 80px;
