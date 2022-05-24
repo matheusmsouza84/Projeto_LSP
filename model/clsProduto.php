@@ -6,7 +6,9 @@
         public $nome;
         public $genero;
         public $preco;
+        public $cripto;
         public $quantidade;
+        
 
     }
 ?>

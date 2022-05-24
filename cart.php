@@ -77,6 +77,7 @@
                                 echo '      <th>Genero</th>';
                                 echo '      <th>Quantidade</th>';
                                 echo '      <th>Preço</th>';
+                                echo '      <th>Cripto</th>';
                                 echo '      <th>Subtotal</th>';
                                 echo '  </tr>';
                                 $total = 0;
@@ -90,6 +91,8 @@
                                     echo '      <td>'.$produto->genero.'</td>';
                                     echo '      <td>'.$quantidade.'</td>';
                                     echo '      <td>R$ '.$produto->preco.'</td>';
+                                    echo '      <td>LSP'.$cripto->cripto.'</td>';
+
                                     
                                     $subtotal = $quantidade * $produto->preco;
                                     $total += $subtotal;

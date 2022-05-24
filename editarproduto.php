@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    include_once "../model/clsConexao.php";
+    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+    $result_prod = "SELECT * FROM produtos WHERE id = '$id'";
+    $resultado = mysqli_query_query($conn, $result_prod);
+    $produto = mysqli_fetch_assoc($resultado);    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -59,11 +67,12 @@
             <div class="content"><br><br><br><br><br><br><br>
             <div class="shadow-lg bg-cray" id="divsombra">
                         <h4><b>Cadastrar Produto</b></h4><br>
-                        <form method="POST" action="controller/salvarproduto.php">
+                        <form method="POST" action="controller/editarprod.php">
+                        <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
                             <label><b>Nome:</b></label>
-                                <input type="text" name="nome" placeholder="Nome do Produto" required><br><br>
+                                <input type="text" name="nome" placeholder="Nome do Produto" value="<?php echo $produto['nome']; ?>" required><br><br>
                             <label><b>Gênero:</b></label>
-                                <select name="genero" id="sgenero" required>
+                                <select name="genero" id="sgenero" value="<?php echo $produto['genero']; ?>" required>
                                     <option value=""> Selecione </option>
                                     <option value="Arcade"> Arcade </option>
                                     <option value="MMO"> Aventura </option>
@@ -72,14 +81,12 @@
                                     <option value="Terror"> Terror </option>
                                 </select><br><br>
                             <label><b>Preço:</b></label>
-                                <input type="number" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01"><br><br>
+                                <input type="number" name="preco" placeholder="Preço" value="<?php echo $produto['preco']; ?>" required min="0.01" max="10000.00" step="0.01"><br><br>
                             <label><b>Quantidade:</b></label>
-                                <input type="number" name="quantidade" placeholder="Quantidade" required min="1"><br><br>
+                                <input type="number" name="quantidade" value="<?php echo $produto['quantidade']; ?>" placeholder="Quantidade" required min="1"><br><br>
                             <input type="submit" value="Cadastrar Produto"><br>
                             
                         </form>
                     </div>
             </div>
         <div class="footer"></div>
-    </body>
-</html>
