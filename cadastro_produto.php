@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="somar.js"></script>
     <title> Cadastro </title>
 </head>
     <body>
@@ -63,10 +64,11 @@
                                     <option value="Terror"> Terror </option>
                                 </select><br><br>
                             <label><b>Preço:</b></label>
-                                <input type="number" name="preco" placeholder="Preço" required min="1.0"><br><br>
+                                <input type="number" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01"><br><br>
                             <label><b>Quantidade:</b></label>
-                                <input type="number" name="quantidade" placeholder="Quantidade" required><br><br>
-                                <input type="submit" value="Cadastrar Produto"><br>
+                                <input type="number" name="quantidade" placeholder="Quantidade" required min="1"><br><br>
+                            <input type="submit" value="Cadastrar Produto"><br>
+                            
                         </form>
                     </div>
             </div>

@@ -77,7 +77,8 @@
                             echo '<img src="imagens/jogo.png" widht="150px" height="150px"></img><br>';
                             echo '<label>Nome: '.$prod->nome.'</label><br>';
                             echo '<label>Gênero: '.$prod->genero.'</label><br>';
-                            echo '<label>Preço: '.$prod->preco.'</label><br>';
+                            echo '<label>Preço: R$'.$prod->preco.'</label><br>';
+                            echo '<label>LSP:'.$prod->cripto.'</label><br>';
                             echo '<label>Quantidade: '.$prod->quantidade.'</label><br>';
                             echo '<a href="controller/salvarcart.php?adicionar&idmed='.$prod->id.'">';
                             echo '<button type="button" id="addcart" title="Adicionar ao carrinho">';
