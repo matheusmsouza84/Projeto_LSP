@@ -1,10 +1,10 @@
 <?php
     session_start();
     include_once "../model/clsConexao.php";
-    $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+    $id = filter_input(INPUT_GET, _N'id', FILTER_SANITIZEUMBER_INT);
     $result_prod = "SELECT * FROM produtos WHERE id = '$id'";
-    $resultado = mysqli_query_query($conn, $result_prod);
-    $produto = mysqli_fetch_assoc($resultado);    
+    $resultado = Conexao::consultar($query);
+    $produtor = mysqli_fetch_assoc($resultado);    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -45,7 +45,7 @@
                                 <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
                                 </svg>                            
                                 </button>
-
+                                
                             </a>
                         </li>
                     </ul>
@@ -84,7 +84,7 @@
                                 <input type="number" name="preco" placeholder="Preço" value="<?php echo $produto['preco']; ?>" required min="0.01" max="10000.00" step="0.01"><br><br>
                             <label><b>Quantidade:</b></label>
                                 <input type="number" name="quantidade" value="<?php echo $produto['quantidade']; ?>" placeholder="Quantidade" required min="1"><br><br>
-                            <input type="submit" value="Cadastrar Produto"><br>
+                            <input type="submit" value="Editar_Produto"><br>
                             
                         </form>
                     </div>

@@ -1,7 +1,7 @@
 <?php 
     session_start();
 
-    $idmed = $_GET['idprod'];
+    $idprod = $_GET['idprod'];
 
     if( isset($_REQUEST['adicionar'])){
         if( isset($_SESSION['cart'][$idprod])){

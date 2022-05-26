@@ -84,17 +84,17 @@
 
                                 foreach( $_SESSION['cart'] as $idprod => $quantidade ){
                                     
-                                    $produto = ProdutoDAO::getProdutosById($idprod);
+                                    $produto1 = ProdutoDAO::getProdutosById($idprod);
                                     echo ' <tr>';
-                                    echo '      <td>'.$produto->id.'</td>';
-                                    echo '      <td>'.$produto->nome.'</td>';
-                                    echo '      <td>'.$produto->genero.'</td>';
+                                    echo '      <td>'.$produto1->id.'</td>';
+                                    echo '      <td>'.$produto1->nome.'</td>';
+                                    echo '      <td>'.$produto1->genero.'</td>';
                                     echo '      <td>'.$quantidade.'</td>';
-                                    echo '      <td>R$ '.$produto->preco.'</td>';
-                                    echo '      <td>LSP'.$cripto->cripto.'</td>';
+                                    echo '      <td>R$ '.$produto1->preco.'</td>';
+                                    echo '      <td>LSP'.$produto1->cripto.'</td>';
 
                                     
-                                    $subtotal = $quantidade * $produto->preco;
+                                    $subtotal = $quantidade * $produto1->preco;
                                     $total += $subtotal;
                                         
                                     echo ' <td>R$ '.$subtotal.'</td>';
