@@ -15,7 +15,7 @@
             header("Location: ../loja.php");
         }else
         {
-            header(" Location: ../index.php?erro");
+            header(" Location: ../index.php?erro=1");
             
         }
 ?>

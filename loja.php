@@ -73,12 +73,14 @@
                     $Lista = ProdutoDAO::getProdutos();
                         foreach($Lista as $prod){
                             $cont++;
+                            //$cripto = number_format($cripto, 2, '.', '');
+                            //number_format(1, 2, '.', '');
                             echo '<div id="divprod">';
                             echo '<img src="imagens/jogo.png" widht="150px" height="150px"></img><br>';
                             echo '<label>Nome: '.$prod->nome.'</label><br>';
                             echo '<label>Gênero: '.$prod->genero.'</label><br>';
                             echo '<label>Preço: R$'.$prod->preco.'</label><br>';
-                            echo '<label>LSP:'.$prod->cripto.'</label><br>';
+                            echo '<label>DOGE:'.$prod->cripto.'</label><br>';
                             echo '<label>Quantidade: '.$prod->quantidade.'</label><br>';
                             echo '<a href="controller/salvarcart.php?adicionar&idmed='.$prod->id.'">';
                             echo '<button type="button" id="addcart" title="Adicionar ao carrinho">';

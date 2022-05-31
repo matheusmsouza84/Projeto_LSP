@@ -68,7 +68,6 @@
                                 </div>';
                                 
                             }else{
-                                
                                 echo '<div id="table">';
                                 echo '<table>';
                                 echo '  <tr>';
@@ -81,6 +80,7 @@
                                 echo '      <th>Subtotal</th>';
                                 echo '  </tr>';
                                 $total = 0;
+                                $totalc = 0;
 
                                 foreach( $_SESSION['cart'] as $idprod => $quantidade ){
                                     
@@ -92,13 +92,19 @@
                                     echo '      <td>'.$quantidade.'</td>';
                                     echo '      <td>R$ '.$produto1->preco.'</td>';
                                     echo '      <td>LSP'.$produto1->cripto.'</td>';
-
-                                    
                                     $subtotal = $quantidade * $produto1->preco;
                                     $total += $subtotal;
                                         
                                     echo ' <td>R$ '.$subtotal.'</td>';
+
+                                    $subtotalc = $quantidade * $produto1->cripto;
+                                    $totalc += $subtotalc;
+                                    
+                                    echo ' <td>R$ '.$subtotalc.'</td>';
                                     echo ' </tr>';
+
+
+
                                 }
                                 echo '  <tr>';
                                 echo '      <th colspan="4">Total:</th>';

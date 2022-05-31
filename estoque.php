@@ -79,7 +79,7 @@
                             echo '<label>Nome: '.$prod->nome.'</label><br>';
                             echo '<label>Gênero: '.$prod->genero.'</label><br>';
                             echo '<label>Preço: R$'.$prod->preco.'</label><br>';
-                            echo '<label>LSP:'.$prod->cripto.'</label><br>';
+                            echo '<label>DOGE:'.$prod->cripto.'</label><br>';
                             echo '<label>Quantidade: '.$prod->quantidade.'</label><br>';
                             echo '<a href="editarproduto.php"">';
                             echo '<button type="button" id="addcart" title="Editar Produto">';
