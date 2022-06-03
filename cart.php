@@ -68,7 +68,6 @@
                                 </div>';
                                 
                             }else{
-                                
                                 echo '<div id="table">';
                                 echo '<table>';
                                 echo '  <tr>';
@@ -77,10 +76,12 @@
                                 echo '      <th>Genero</th>';
                                 echo '      <th>Quantidade</th>';
                                 echo '      <th>Preço</th>';
-                                echo '      <th>Cripto</th>';
+                                echo '      <th>DOGE</th>';
+                                echo '      <th>Subtotal</th>';
                                 echo '      <th>Subtotal</th>';
                                 echo '  </tr>';
                                 $total = 0;
+                                $totalc = 0;
 
                                 foreach( $_SESSION['cart'] as $idprod => $quantidade ){
                                     
@@ -91,23 +92,33 @@
                                     echo '      <td>'.$produto->genero.'</td>';
                                     echo '      <td>'.$quantidade.'</td>';
                                     echo '      <td>R$ '.$produto->preco.'</td>';
-                                    echo '      <td>LSP'.$cripto->cripto.'</td>';
-
+                                    echo '      <td>'.$produto->cripto.'</td>';
                                     
                                     $subtotal = $quantidade * $produto->preco;
                                     $total += $subtotal;
                                         
                                     echo ' <td>R$ '.$subtotal.'</td>';
+
+                                    $subtotalc = $quantidade * $produto->cripto;
+                                    $totalc += $subtotalc;
+                                    
+                                    echo ' <td>'.$subtotalc.'</td>';
                                     echo ' </tr>';
+
                                 }
                                 echo '  <tr>';
                                 echo '      <th colspan="4">Total:</th>';
                                 echo '      <th colspan="3">R$ '.$total.'</th>';
+                                echo '      <th colspan="3">DOGE '.$totalc.'</th>';
+
                                 echo '  </tr>';
                                 echo '</table>';
                                 echo '</div>';
+                                echo '<button type="button" class="btn btn-warning">CriptoMoeda</button>';
+                                echo '<br>';
+                                echo '<button type="button" class="btn btn-success">Dinheiro</button>';
                             }
-                        ?>
+                            ?>                           
                         <br><br><br><br>
             </div>
         <div class="footer"><br><br><br></div>

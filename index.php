@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+    session_start();
+    
+    if( isset($_REQUEST['errouser']) ){
+        echo "<script> alert('Usuário e/ou Senha não cadastrado'); </script>";
+        }
+
+?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">

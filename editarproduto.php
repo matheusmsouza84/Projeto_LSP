@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    include_once "DAO/clsProdutosDAO.php";
+    include_once "model/clsConexao.php";
+    include_once "model/clsProduto.php";
+    //$id = filter_input(INPUT_GET, _N'id', FILTER_SANITIZEUMBER_INT);
+    $result_prod = "SELECT * FROM produtos WHERE id = '1'";
+    //$resultadop = mysqli_query($conn, $result_prod);
+    $resultadop = Conexao::consultar($result_prod);
+    $produtor = mysqli_fetch_assoc($resultadop);   
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -37,7 +48,7 @@
                                 <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
                                 </svg>                            
                                 </button>
-
+                                
                             </a>
                         </li>
                     </ul>
@@ -58,12 +69,13 @@
             </nav>
             <div class="content"><br><br><br><br><br><br><br>
             <div class="shadow-lg bg-cray" id="divsombra">
-                        <h4><b>Cadastrar Produto</b></h4><br>
-                        <form method="POST" action="controller/salvarproduto.php">
+                        <h4><b>Editar Produto</b></h4><br>
+                        <form method="POST" action="controller/editarprod.php">
+                        <input type="hidden" name="id" value="<?php echo $prod['id']; ?>">
                             <label><b>Nome:</b></label>
-                                <input type="text" name="nome" placeholder="Nome do Produto" required><br><br>
+                                <input type="text" name="nome" placeholder="Nome do Produto" value="<?php echo $prode['nome']; ?>" required><br><br>
                             <label><b>Gênero:</b></label>
-                                <select name="genero" id="sgenero" required>
+                                <select name="genero" id="sgenero" value="<?php echo $produto['genero']; ?>" required>
                                     <option value=""> Selecione </option>
                                     <option value="Arcade"> Arcade </option>
                                     <option value="MMO"> Aventura </option>
@@ -72,14 +84,13 @@
                                     <option value="Terror"> Terror </option>
                                 </select><br><br>
                             <label><b>Preço:</b></label>
-                                <input type="number" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01"><br><br>
+                                <input type="number" name="preco" placeholder="Preço" value="<?php echo $prode['preco']; ?>" required min="0.01" max="10000.00" step="0.01"><br><br>
                             <label><b>Quantidade:</b></label>
-                                <input type="number" name="quantidade" placeholder="Quantidade" required min="1"><br><br>
-                            <input type="submit" value="Cadastrar Produto"><br>
+                                <input type="number" name="quantidade" value="<?php echo $prode['quantidade']; ?>" placeholder="Quantidade" required min="1"><br><br>
+                            <input type="submit" value="Editar_Produto"><br>
                             
                         </form>
                     </div>
             </div>
         <div class="footer"></div>
-    </body>
-</html>
+        <br /><b>Warning</b>:  Undefined variable $produto in <b>C:\xampp\htdocs\Projeto_LSP\editarproduto.php</b> on line <b>74</b><br /><br /><b>Warning</b>:  Trying to access array offset on value of type null in <b>C:\xampp\htdocs\Projeto_LSP\editarproduto.php</b> on line <b>74</b><br />

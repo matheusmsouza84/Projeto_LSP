@@ -22,3 +22,4 @@ CREATE TABLE produtos (
 );
 
 INSERT INTO `adm`(`id`, `nome`, `senha`) VALUES ( 1, "admin", 1234 );
+INSERT INTO `adm`(`id`, `nome`, `senha`) VALUES ( 2, "admin2", 1234 );

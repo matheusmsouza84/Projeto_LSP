@@ -21,7 +21,7 @@
     }
 
     public static function getProdutosById($idprod){
-    $query = 'SELECT id, nome, genero, preco, quantidade, cripto FROM produtos WHERE id ='.$idprod;
+        $query = 'SELECT id, nome, genero, preco, quantidade, cripto FROM produtos WHERE id ='.$idprod;
         $result = Conexao::consultar($query);
         list($id, $nome, $genero, $preco, $quantidade, $cripto) = mysqli_fetch_row($result);
             $prod = new Produto();

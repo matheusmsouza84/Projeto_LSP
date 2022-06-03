@@ -78,9 +78,9 @@
                             echo '<label>Nome: '.$prod->nome.'</label><br>';
                             echo '<label>Gênero: '.$prod->genero.'</label><br>';
                             echo '<label>Preço: R$'.$prod->preco.'</label><br>';
-                            echo '<label>LSP:'.$prod->cripto.'</label><br>';
+                            echo '<label>DOGE:'.$prod->cripto.'</label><br>';
                             echo '<label>Quantidade: '.$prod->quantidade.'</label><br>';
-                            echo '<a href="controller/salvarcart.php?adicionar&idmed='.$prod->id.'">';
+                            echo '<a href="controller/salvarcart.php?adicionar&idprod='.$prod->id.'">';
                             echo '<button type="button" id="addcart" title="Adicionar ao carrinho">';
                             echo '<svg class="bi bi-plus-square" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">';
                             echo '<path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>';
@@ -89,7 +89,7 @@
                             echo '</svg>';
                             echo '</button>';
                             echo '</a>';
-                            echo '<a href="controller/salvarcart.php?excluir&idmed='.$prod->id.'">';
+                            echo '<a href="controller/salvarcart.php?deletar&idprod='.$prod->id.'">';
                             echo '<button type="button" id="exccart" title="Excluir do carrinho">';
                             echo '<svg class="bi bi-trash" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">';
                             echo '<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>';
@@ -104,7 +104,7 @@
                                 }
                         }
                 ?>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>   
             </div>
             <div class="footer"></div>
     </body>

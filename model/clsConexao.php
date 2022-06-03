@@ -1,9 +1,11 @@
 <?php
+
 class Conexao{
     private static $local = "localhost";
     private static $user = "root";
     private static $senha = "";
     private static $banco = "banco_loja";
+
     private static function abrir(){
         $conn = mysqli_connect(self::$local , self::$user, self::$senha , self::$banco);
         if( $conn ) { 
