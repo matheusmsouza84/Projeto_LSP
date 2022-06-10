@@ -10,12 +10,12 @@
             $usuario = mysqli_fetch_assoc($result);
             $_SESSION["logado"] = TRUE;
             $_SESSION["email_usuario"] = $usuario['email'];
-            $_SESSION["senha_usuario"] = $usuario['nome'];
+            $_SESSION["senha_usuario"] = $usuario['senha'];
 
             header("Location: ../loja.php");
         }else
         {
-            header(" Location: ../index.php?errouser");
+            header(" Location: ../index.php?errous");
             
         }
 ?>

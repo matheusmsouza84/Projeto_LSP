@@ -17,8 +17,8 @@
 
         foreach ($resultado ->dogecoin as $moeda) {
             //var_dump($moeda);
-            echo "Preço: " . $moeda . "<br>";            
-            echo "<hr>";
+            //echo "Preço: " . $moeda . "<br>";            
+            //echo "<hr>";
             return $moeda;
         }
         ?>
