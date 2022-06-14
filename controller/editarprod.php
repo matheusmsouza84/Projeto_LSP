@@ -1,18 +1,24 @@
 <?php
+session_start();
 include_once "../model/clsConexao.php";
 include_once "../DAO/clsProdutosDAO.php";
 include_once "../api.php";
 
-    session_start();
-    $idprod = $_SESSION['idprod'];
+
+
+    
+    $idprod = $_SESSION['prodid'];
     $nome = $_POST['nome'];
     $genero = $_POST['genero'];
     $preco = $_POST['preco'];
     $cripto = $preco/$moeda;
     $quantidade = $_POST['quantidade'];
 
+   // echo $idprod."<br>";
+   // echo $nome."<br>";
+       
     $query = "UPDATE produtos SET nome = '$nome', genero = '$genero' , preco = '$preco', quantidade = '$quantidade', cripto = '$cripto' WHERE id = '$idprod'";
-    
     $result = Conexao::executar($query);
     header("Location: ../estoque.php");
+
 ?>

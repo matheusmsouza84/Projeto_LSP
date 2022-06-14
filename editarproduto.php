@@ -3,7 +3,12 @@
     include_once "DAO/clsProdutosDAO.php";
     include_once "model/clsConexao.php";
     include_once "model/clsProduto.php";
-     
+    
+    if(!empty($_GET['prodid'])){
+
+        $_SESSION['prodid'] = $_GET['prodid'];
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -88,4 +93,12 @@
                     </div>
             </div>
         <div class="footer"></div>
+
+        <?php
+    }else{
+        echo "DEU RUIM";
+    }
+
+
+?>
        

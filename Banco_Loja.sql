@@ -18,6 +18,7 @@ CREATE TABLE produtos (
     nome VARCHAR(50) NOT NULL,
     genero VARCHAR(50) NOT NULL,
     preco DOUBLE NOT NULL,
+    cripto DOUBLE NOT NULL,
     quantidade INT NOT NULL
 );
 
