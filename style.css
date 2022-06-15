@@ -15,7 +15,10 @@ body{
     background-image: 
     url("imagens/img.png");
     background-position: center;
-    height: 700px;
+    min-width: 600px;
+    max-width: auto;
+    min-height: 600px;
+    max-height: auto;
     text-align: center;
 }
 .footer{

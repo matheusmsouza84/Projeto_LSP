@@ -4,9 +4,6 @@ include_once "../model/clsConexao.php";
 include_once "../DAO/clsProdutosDAO.php";
 include_once "../api.php";
 
-
-
-    
     $idprod = $_SESSION['prodid'];
     $nome = $_POST['nome'];
     $genero = $_POST['genero'];

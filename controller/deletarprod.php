@@ -3,9 +3,10 @@ include_once "../model/clsConexao.php";
 include_once "../DAO/clsProdutosDAO.php";
 include_once "../estoque.php";
 
-    session_start();
-    $idprod = $_SESSION['idprod'];
-    $query = "DELETE FROM produtos WHERE id = '$idprod'";
-    $result = Conexao::executar($query);  
+    $prodid = $_SESSION['prodid'];
+    $query = "DELETE FROM produtos WHERE id = '$prodid'";
+    $result = Conexao::executar($query);
+    session_destroy();
     header("Location: ../estoque.php");
+    
 ?>

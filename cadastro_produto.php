@@ -16,7 +16,7 @@
                         <li class="nav-item">
                             <a href="index.php">
                                 <button type="button" id="paginicial" title="Voltar a página Inicial">
-                                    <svg class="bi bi-house-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="bi bi-house-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
                                         <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
                                     </svg>
@@ -24,7 +24,7 @@
                             </a>
                             <a href="loja.php">
                                 <button type="button" id="paginicial" title="Ir para a loja">
-                                    <svg class="bi bi-basket3-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="bi bi-basket3-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M10.243 1.071a.5.5 0 0 1 .686.172l3 5a.5.5 0 0 1-.858.514l-3-5a.5.5 0 0 1 .172-.686zm-4.486 0a.5.5 0 0 0-.686.172l-3 5a.5.5 0 1 0 .858.514l3-5a.5.5 0 0 0-.172-.686z"/>
                                         <path d="M13.489 14.605A.5.5 0 0 1 13 15H3a.5.5 0 0 1-.489-.395L1.311 9H14.69l-1.201 5.605z"/>
                                             <rect width="16" height="2" y="6" rx=".5"/>
@@ -32,8 +32,8 @@
                                 </button>
                             </a>
                             <a href="estoque.php">
-                                <button type="button" id="estoque" title="Ir para o Estoque">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box2-fill" viewBox="0 0 16 16">
+                                <button type="button" id="paginicial" title="Ir para o Estoque">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-box2-fill" viewBox="0 0 16 16">
                                 <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
                                 </svg>                            
                                 </button>
@@ -47,7 +47,7 @@
                         <li class="nav-item">
                             <a href="controller/logout.php">
                                 <button type="button" id="logout" title="Logout">
-                                    <svg class="bi bi-person-dash-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="bi bi-person-dash-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
                                     </svg>
                                 </button>
@@ -58,11 +58,12 @@
             </nav>
             <div class="content"><br><br><br><br><br><br><br>
             <div class="shadow-lg bg-cray" id="divsombra">
-                        <h4><b>Cadastrar Produto</b></h4><br>
-                        <form method="POST" action="controller/salvarproduto.php">
-                            <label><b>Nome:</b></label>
-                                <input type="text" name="nome" placeholder="Nome do Produto" required><br><br>
-                            <label><b>Gênero:</b></label>
+                        <h4><b>Cadastrar Produto</b></h4>
+                        <form method="POST" action="controller/salvarproduto.php"  style="text-align:center;">
+                            <label><b>Nome:</b><br>
+                                <input type="text" size="auto" name="nome" placeholder="Nome do Produto" required>
+                            </label><br>
+                                <label><b>Gênero:</b><br>
                                 <select name="genero" id="sgenero" required>
                                     <option value=""> Selecione </option>
                                     <option value="Arcade"> Arcade </option>
@@ -70,13 +71,16 @@
                                     <option value="RPG"> RPG </option>
                                     <option value="MMO"> MMO </option>
                                     <option value="Terror"> Terror </option>
-                                </select><br><br>
-                            <label><b>Preço:</b></label>
-                                <input type="number" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01"><br><br>
-                            <label><b>Quantidade:</b></label>
-                                <input type="number" name="quantidade" placeholder="Quantidade" required min="1"><br><br>
-                            <input type="submit" value="Cadastrar Produto"><br>
-                            
+                                </select>
+                                </label><br>
+                            <label><b>Preço: </b><br>
+                                <input type="number" style="background-color:white;" size="auto" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01">
+                            </label><br>
+                                <label><b>Quantidade:</b><br>
+                                <input type="number"  size="auto" name="quantidade" placeholder="Quantidade" required min="1">
+                                </label><br>
+                                <input type="submit" value="Cadastrar Produto"><br>
+                                
                         </form>
                     </div>
             </div>
