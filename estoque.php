@@ -3,7 +3,10 @@
     include_once "DAO/clsProdutosDAO.php";
     include_once "model/clsConexao.php";
     include_once "model/clsProduto.php";
-    $cont=0;
+    $cont=0;  
+    if( isset($_REQUEST['deletou']) ){
+        echo "<script> alert('você deletou um produto');</script>";
+        }  
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -22,28 +25,24 @@
                         <li class="nav-item">
                             <?php
                                 if(!isset($_SESSION['admlogado']) && !isset($_SESSION['logado'])){
-                                    echo '<a href="index.php">'
-                                        .'<button type="button" id="paginicial" title="Voltar a página Inicial">'
-                                            .'<svg class="bi bi-house-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">'
-                                                .'<path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>'
-                                                .'<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>'
-                                            .'</svg>'
-                                        .'</button>'
-                                    .'</a>';
                                 }
                             ?>
-                            <?php
-                                if(isset($_SESSION['admlogado'])){
-                                    echo '<a href="cadastro_produto.php">'
-                                            .'<button type="button" id="voltar" title="Voltar">'
-                                            .'<svg class="bi bi-arrow-left" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">'
-                                            .'<path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>'
-                                            .'<path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>'
-                                            .'</svg>'
-                                        .'</button>'
-                                    .'</a>';
-                                }
-                            ?>
+                            <a href="index.php">
+                                        <button type="button" id="paginicial" title="Voltar a página Inicial">
+                                            <svg class="bi bi-house-fill" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                            </svg>
+                                        </button>
+                                    </a>
+                                        <a href="cadastro_produto.php">
+                                            <button type="button" id="voltar" title="Voltar">
+                                            <svg class="bi bi-arrow-left" width="20px" height="20px" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg%22%3E">
+                                            <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
+                                            <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>'
+                                            </svg>
+                                        </button>
+                                    </a>
                         </li>
                     </ul>
                 </div>
@@ -83,9 +82,9 @@
                             echo '<label>Quantidade: '.$prod->quantidade.'</label><br>';
                             echo '<a href="editarproduto.php?prodid='.$prod->id.'">';
                             echo '<button type="button" id="exccart" title="Editar Produto">';
-                            echo '<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="white" class="bi bi-pencil"">
-                            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                          </svg>';
+                            echo '<svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="white" class="bi bi-pencil"">';
+                            echo '<path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>';
+                            echo '</svg>';
                             echo '</button>';
                             echo '</a>';
                             echo '<a href="controller/deletarprod.php?prodid='.$prod->id.'">';
@@ -96,16 +95,13 @@
                             echo '<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>';
                             echo '</svg>';
                             echo '</button>';
-                            echo '</a>';
-                            
-                            
+                            echo '</a>';   
                             echo '</div>';
                                 if($cont == 4){
                                     echo "<br>";
                                     $cont == 0;
                                 }
-                        }
-                        
+                        }     
                 ?>
             </div>
             <div class="footer"></div>

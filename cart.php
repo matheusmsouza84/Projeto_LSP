@@ -110,11 +110,15 @@
                                 echo '      <th colspan="4">Total:</th>';
                                 echo '      <th colspan="3">R$ '.$total.'</th>';
                                 echo '      <th colspan="3">DOGE '.$totalc.'</th>';
-
                                 echo '  </tr>';
                                 echo '</table>';
                                 echo '</div>';
+                                $_SESSION['real'] = $total;
+                                $_SESSION['cripto'] = $totalc;
+
+                                echo '<a href="pag_cripto.php">';
                                 echo '<button type="button" class="btn btn-warning">CriptoMoeda</button>';
+                                echo '</a>';
                                 echo '<br>';
                                 echo '<button type="button" class="btn btn-success">Dinheiro</button>';
                             }
