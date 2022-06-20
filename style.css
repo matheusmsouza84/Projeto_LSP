@@ -15,9 +15,9 @@ body{
     background-image: 
     url("imagens/img.png");
     background-position: center;
-    min-width: 600px;
+    min-width: 900px;
     max-width: auto;
-    min-height: 600px;
+    min-height: 900px;
     max-height: auto;
     text-align: center;
 }

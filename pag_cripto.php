@@ -53,14 +53,19 @@
                             Login with MetaMask
                           </button>
                           <p id='userWallet' class='text-lg text-gray-600 my-2'></p>
+                          <?php
+                              echo '<label>DOGE: '.$cripto.'</label><br>';
+                              echo '<label>Preço R$: '.$real.'</label><br>';
+                              echo '<a href="loja.php?compra">';
+                              echo '<button type="button" class="btn btn-success">Comprar</button>';
+                              echo '</a>';
+                            ?>
                           <script>
                             window.userWalletAddress = null
                             const loginButton = document.getElementById('loginButton')
                             const userWallet = document.getElementById('userWallet')
 
-                            <?php
-                                
-                            ?>
+                            
                         
                             function toggleButton() {
                               if (!window.ethereum) {
