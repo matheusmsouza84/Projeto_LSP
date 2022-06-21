@@ -18,8 +18,9 @@ CREATE TABLE produtos (
     nome VARCHAR(50) NOT NULL,
     genero VARCHAR(50) NOT NULL,
     preco DOUBLE NOT NULL,
-    cripto DOUBLE NOT NULL,
-    quantidade INT NOT NULL
+    cripto float NOT NULL,
+    quantidade INT NOT NULL,
+    imagem VARCHAR(200) NOT NULL
 );
 
 INSERT INTO `adm`(`id`, `nome`, `senha`) VALUES ( 1, "admin", 1234 );

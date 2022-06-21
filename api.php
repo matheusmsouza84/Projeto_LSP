@@ -13,12 +13,8 @@
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         $resultado = json_decode(curl_exec($ch));
 
-        //var_dump($resultado);
 
         foreach ($resultado ->dogecoin as $moeda) {
-            //var_dump($moeda);
-            //echo "Preço: " . $moeda . "<br>";            
-            //echo "<hr>";
             return $moeda;
         }
         ?>

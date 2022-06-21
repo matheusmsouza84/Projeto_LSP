@@ -120,8 +120,10 @@
                                 echo '<a href="pag_cripto.php">';
                                 echo '<button type="button" class="btn btn-warning">CriptoMoeda</button>';
                                 echo '</a>';
-                                echo '<br>';
+                                echo '    ';
+                                echo '<a href="pagamento.php">';
                                 echo '<button type="button" class="btn btn-success">Dinheiro</button>';
+                                echo '</a>';
                             }
                             ?>                           
                         <br><br><br><br>

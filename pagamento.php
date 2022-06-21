@@ -1,16 +1,3 @@
-<?php
-    session_start();
-    include_once "DAO/clsProdutosDAO.php";
-    include_once "model/clsConexao.php";
-    include_once "model/clsProduto.php";
-    
-    if(!empty($_GET['prodid'])){
-
-        $_SESSION['prodid'] = $_GET['prodid'];
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="somar.js"></script>
-    <title> Editar Produto </title>
+    <title> Pagamento </title>
 </head>
     <body>
     <div class="header">CMR Store</div>
@@ -71,41 +58,33 @@
             </nav>
             <div class="content"><br><br><br><br><br><br><br>
             <div class="shadow-lg bg-cray" id="divsombra">
-                 <?php 
-
-                        echo'<h4><b>Editar Produto</b></h4><br>
-                        <form method="POST" action="controller/editarprod.php" enctype="multipart/form-data">
-                            <label><b>Nome:</b></label><br>
-                                <input type="text" name="nome" placeholder="Nome do Produto" required><br>
-                            <label><b>Gênero:</b></label><br>
-                                <select name="genero" id="sgenero"  required>
-                                    <option value=""> Selecione </option>
-                                    <option value="Arcade"> Arcade </option>
-                                    <option value="MMO"> Aventura </option>
-                                    <option value="RPG"> RPG </option>
-                                    <option value="MMO"> MMO </option>
-                                    <option value="Terror"> Terror </option>
-                                </select><br>
-                                <label><b>Imagem:</b></label><br>
-                            <input name="arquivo" type="file" required><br>
-                            <label><b>Preço:</b></label><br>
-                                <input type="number" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01"><br>
-                            <label><b>Quantidade:</b></label><br>
-                                <input type="number" name="quantidade" placeholder="Quantidade" required min="1"><br><br>
-                            <input type="submit" value="Editar Produto"><br>
-                            
+            <form method="POST" action="loja.php?compra"  style="text-align:lefth;">
+                            <label><b>Numero do cartão:</b><br>
+                                <input type="text" size="auto" name="numero" placeholder="Numero do cartão" required>
+                            </label><br>
+                            <label><b>Nome do Cartão:</b><br>
+                                <input type="text" size="auto" name="Nome" placeholder="Nome do cartão" required>
+                            </label><br>
+                                <label><b>Parcelas:</b>
+                                <select name="genero" id="sgenero" required>
+                                    <option value=""></option>
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="5"> 5 </option>
+                                </select>
+                                </label><br>
+                            <label><b>Validade: </b><br>
+                                <input type="decimal" style="background-color:white;" size="auto" name="validade" placeholder="00/00">
+                            </label><br>
+                                <label><b>CVV:</b><br>
+                                <input type="number"  size="9px" name="quantidade" placeholder="CVV" required min="1">
+                                </label><br>
+                                <input type="submit" value="Comprar"><br>
+                                
                         </form>
-                        ';
-                 ?>
             </div>
             </div>
         <div class="footer"></div>
-
-        <?php
-    }else{
-        echo "DEU RUIM";
-    }
-
-
-?>
        

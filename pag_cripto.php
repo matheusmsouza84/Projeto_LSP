@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="somar.js"></script>
-    <title> Cadastro </title>
+    <title> Pagamento </title>
 </head>
     <body>
     <div class="header">CMR Store</div>
@@ -56,11 +56,10 @@
                           <?php
                               echo '<label>DOGE: '.$cripto.'</label><br>';
                               echo '<label>Preço R$: '.$real.'</label><br>';
-                              /*<?php
                               echo '<a href="loja.php?compra">';
                               echo '<button type="button" class="btn btn-success">Comprar</button>';
                               echo '</a>';
-                              ?>*/
+                              
                             ?>
                           <script>
                             window.userWalletAddress = null
