@@ -8,6 +8,7 @@
         public $preco;
         public $cripto;
         public $quantidade;
+        public $imagem;
         
 
     }

@@ -53,7 +53,7 @@
                         foreach($Lista as $prod){
                             $cont++;
                             echo '<div id="divprod">';
-                            echo '<img src="imagens/jogo.png" widht="150px" height="150px"></img><br>';
+                            echo '<img src="imagens/'.$prod->imagem.'" widht="150px" height="150px"></img><br>';
                             echo '<label>Nome: '.$prod->nome.'</label><br>';
                             echo '<label>Gênero: '.$prod->genero.'</label><br>';
                             echo '<label>Preço: R$'.$prod->preco.'</label><br>';

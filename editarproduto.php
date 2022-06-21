@@ -74,7 +74,7 @@
                  <?php 
 
                         echo'<h4><b>Editar Produto</b></h4><br>
-                        <form method="POST" action="controller/editarprod.php">
+                        <form method="POST" action="controller/editarprod.php" enctype="multipart/form-data">
                             <label><b>Nome:</b></label><br>
                                 <input type="text" name="nome" placeholder="Nome do Produto" required><br>
                             <label><b>Gênero:</b></label><br>
@@ -86,6 +86,8 @@
                                     <option value="MMO"> MMO </option>
                                     <option value="Terror"> Terror </option>
                                 </select><br>
+                                <label><b>Imagem:</b></label><br>
+                            <input name="arquivo" type="file" required><br>
                             <label><b>Preço:</b></label><br>
                                 <input type="number" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01"><br>
                             <label><b>Quantidade:</b></label><br>

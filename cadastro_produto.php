@@ -59,9 +59,9 @@
             <div class="content"><br><br><br><br><br><br><br>
             <div class="shadow-lg bg-cray" id="divsombra">
                         <h4><b>Cadastrar Produto</b></h4>
-                        <form method="POST" action="controller/salvarproduto.php"  style="text-align:center;">
+                        <form method="POST" action="controller/salvarproduto.php"  style="text-align:center;" enctype="multipart/form-data">
                             <label><b>Nome:</b><br>
-                                <input type="text" size="auto" name="nome" placeholder="Nome do Produto" required>
+                                <input type="text" size="36px" name="nome" placeholder="Nome do Produto" required>
                             </label><br>
                                 <label><b>Gênero:</b><br>
                                 <select name="genero" id="sgenero" required>
@@ -73,11 +73,13 @@
                                     <option value="Terror"> Terror </option>
                                 </select>
                                 </label><br>
+                            <label><b>Imagem:</b></label><br>
+                            <input name="arquivo" type="file" required><br>
                             <label><b>Preço: </b><br>
-                                <input type="number" style="background-color:white;" size="auto" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01">
+                                <input type="number" style="background-color:white;" size="36px" name="preco" placeholder="Preço" required min="0.01" max="10000.00" step="0.01">
                             </label><br>
                                 <label><b>Quantidade:</b><br>
-                                <input type="number"  size="auto" name="quantidade" placeholder="Quantidade" required min="1">
+                                <input type="number"  size="36px" name="quantidade" placeholder="Quantidade" required min="1">
                                 </label><br>
                                 <input type="submit" value="Cadastrar Produto"><br>
                                 

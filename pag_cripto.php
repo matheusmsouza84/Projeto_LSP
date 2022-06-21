@@ -56,9 +56,11 @@
                           <?php
                               echo '<label>DOGE: '.$cripto.'</label><br>';
                               echo '<label>Preço R$: '.$real.'</label><br>';
+                              /*<?php
                               echo '<a href="loja.php?compra">';
                               echo '<button type="button" class="btn btn-success">Comprar</button>';
                               echo '</a>';
+                              ?>*/
                             ?>
                           <script>
                             window.userWalletAddress = null
@@ -109,6 +111,7 @@
                         
                             window.addEventListener('DOMContentLoaded', () => {
                               toggleButton()
+                              
                             });
                           </script>
                     </div>
